@@ -4,6 +4,7 @@ import {mobile} from '../responsive'
 import { useState } from "react";
 import { login } from "../redux/apiCall";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -53,7 +54,7 @@ color: white;
   cursor: not-allowed;
 }
 `;
-const Link = styled.a`
+const Linked = styled.a`
 margin:10px 0px;
 font-size:12px;
 text-decoration: underline;
@@ -83,7 +84,7 @@ const Login = () => {
           <Button onClick={handleClick} disabled={isFetching}>LOG IN</Button>
           {error && <Error>Something is Wrong....</Error>}
           <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Link to="/register">CREATE A NEW ACCOUNT</Link>
         </Form>
       </Wrapper>
     </Container>
