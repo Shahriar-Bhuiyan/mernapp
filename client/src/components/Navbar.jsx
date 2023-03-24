@@ -48,6 +48,7 @@ const Center = styled.div`
 const Logo = styled.h1`
   font-weight: bold;
   ${mobile({ fontSize: "24px"})}
+  cursor:pointer;
 `;
 
 const Right = styled.div`
@@ -67,7 +68,6 @@ const MenuItems = styled.div`
 
 const Navbar = () => {
   const quantity = useSelector(state=>state.cart.quantity)
-  console.log(quantity)
   return (
     <Container>
       <Wrapper>
@@ -80,7 +80,7 @@ const Navbar = () => {
         </Left>
         <Center>
           <Logo>
-            ShoBShoP
+            <Link to="/">ShopShop</Link>
           </Logo>
         </Center>
         <Right>
